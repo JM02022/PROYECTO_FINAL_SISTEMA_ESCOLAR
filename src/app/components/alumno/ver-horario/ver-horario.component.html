@@ -6,19 +6,18 @@
         <table class="table">
           <thead>
             <tr>
+              <th scope="col">Nombre Curso</th>
+              <th scope="col">Descripcion</th>
+              <th scope="col">Imagen Url</th>
               <th scope="col">Codigo Curso</th>
-              <th scope="col">Nombre</th>
-              <th scope="col">Descripccion</th>
-              <th scope="col">Imagen</th>
             </tr>
           </thead>
           <tbody>
             <tr *ngFor="let element of cursos; index as i">
               <td>{{ element.nombre }}</td>
               <td>{{ element.descripcion }}</td>
-              <td>{{ element.imagen }}</td>
-              
-              
+              <!-- <td>{{ element.imagen }}</td> -->
+              <td><img [src]="element.imagen" alt="" width="100px;"></td>
             <td>{{ element.codigoC}}</td>
             </tr>
           </tbody>
